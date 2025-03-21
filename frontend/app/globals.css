@@ -1,0 +1,199 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 230 25% 8%;
+    --foreground: 210 40% 98%;
+    --card: 230 25% 10%;
+    --card-foreground: 210 40% 98%;
+    --popover: 230 25% 10%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 196 100% 50%;
+    --primary-foreground: 230 25% 10%;
+    --secondary: 230 25% 15%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 230 25% 15%;
+    --muted-foreground: 215 20.2% 75%;
+    --accent: 196 100% 50%;
+    --accent-foreground: 230 25% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 230 25% 18%;
+    --input: 230 25% 18%;
+    --ring: 196 100% 50%;
+    --radius: 0.75rem;
+
+    --sidebar-background: 230 25% 12%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 196 100% 50%;
+    --sidebar-primary-foreground: 230 25% 10%;
+    --sidebar-accent: 230 25% 18%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 230 25% 20%;
+    --sidebar-ring: 196 100% 50%;
+  }
+
+  .light {
+    --background: 230 25% 8%;
+    --foreground: 210 40% 98%;
+    --card: 230 25% 10%;
+    --card-foreground: 210 40% 98%;
+    --popover: 230 25% 10%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 196 100% 50%;
+    --primary-foreground: 230 25% 10%;
+    --secondary: 230 25% 15%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 230 25% 15%;
+    --muted-foreground: 215 20.2% 75%;
+    --accent: 196 100% 50%;
+    --accent-foreground: 230 25% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 230 25% 18%;
+    --input: 230 25% 18%;
+    --ring: 196 100% 50%;
+
+    --sidebar-background: 230 25% 12%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 196 100% 50%;
+    --sidebar-primary-foreground: 230 25% 10%;
+    --sidebar-accent: 230 25% 18%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 230 25% 20%;
+    --sidebar-ring: 196 100% 50%;
+  }
+
+  .dark {
+    --background: 230 25% 8%;
+    --foreground: 210 40% 98%;
+    --card: 230 25% 10%;
+    --card-foreground: 210 40% 98%;
+    --popover: 230 25% 10%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 196 100% 50%;
+    --primary-foreground: 230 25% 10%;
+    --secondary: 230 25% 15%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 230 25% 15%;
+    --muted-foreground: 215 20.2% 75%;
+    --accent: 196 100% 50%;
+    --accent-foreground: 230 25% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 230 25% 18%;
+    --input: 230 25% 18%;
+    --ring: 196 100% 50%;
+
+    --sidebar-background: 230 25% 12%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 196 100% 50%;
+    --sidebar-primary-foreground: 230 25% 10%;
+    --sidebar-accent: 230 25% 18%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 230 25% 20%;
+    --sidebar-ring: 196 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Futuristic UI Elements */
+.futuristic-card {
+  @apply bg-card border-border border rounded-lg overflow-hidden relative;
+  box-shadow: 0 0 15px rgba(0, 195, 255, 0.15);
+  transition: all 0.3s ease;
+}
+
+.futuristic-card:hover {
+  box-shadow: 0 0 25px rgba(0, 195, 255, 0.25);
+}
+
+.futuristic-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, hsl(var(--primary)), transparent);
+}
+
+.glow-text {
+  text-shadow: 0 0 8px rgba(0, 195, 255, 0.5);
+}
+
+.grid-bg {
+  background-image: linear-gradient(rgba(0, 195, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 195, 255, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.sidebar-content {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--primary)) transparent;
+}
+
+.sidebar-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar-content::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--primary));
+  border-radius: 20px;
+}
+
+/* Animated gradient border for active elements */
+.gradient-border {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.gradient-border::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(45deg, hsl(var(--primary)), transparent, hsl(var(--primary)));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Futuristic button styles */
+.btn-futuristic {
+  @apply relative overflow-hidden transition-all duration-300 ease-in-out;
+  background: linear-gradient(90deg, hsl(var(--primary) / 0.8), hsl(var(--primary)));
+}
+
+.btn-futuristic::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: all 0.6s ease;
+}
+
+.btn-futuristic:hover::before {
+  left: 100%;
+}
+

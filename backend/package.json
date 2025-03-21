@@ -1,0 +1,21 @@
+{
+  "name": "my-v0-project",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "cors": "latest",
+    "cron": "latest",
+    "express": "latest",
+    "fs": "latest",
+    "path": "latest"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2"
+  }
+}
