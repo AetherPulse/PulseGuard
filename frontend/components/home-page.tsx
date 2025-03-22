@@ -201,7 +201,7 @@ interface FeatureCardProps {
 
 function FeatureCard({ icon, title, description }: FeatureCardProps) {
   return (
-    <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 flex flex-col items-center text-center">
+    <div className="bg-slate-900 rounded-lg p-6 shadow-sm border border-slate-900 flex flex-col items-center text-center">
       <div className="mb-4">{icon}</div>
       <h3 className="text-xl font-semibold mb-2">{title}</h3>
       <p className="text-muted-foreground">{description}</p>
